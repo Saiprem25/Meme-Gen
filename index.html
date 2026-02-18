@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme-ify Me! 🤪</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤡 The Ultimate Face-Smashing Meme Generator 🤡</h1>
+            <p>Step 1: Upload a meme. Step 2: Upload your beautiful mug. Step 3: Profit.</p>
+        </header>
+
+        <main class="app-layout">
+            <section class="controls">
+                <div class="control-group">
+                    <h3>🖼️ Choose Your Base Meme</h3>
+                    <input type="file" id="memeInput" accept="image/*">
+                </div>
+
+                <div class="control-group">
+                    <h3>🥴 Upload Your Face</h3>
+                    <input type="file" id="faceInput" accept="image/*">
+                </div>
+
+                <div class="control-group">
+                    <h3>✍️ Customize Text</h3>
+                    <input type="text" id="topText" placeholder="TOP TEXT (e.g., WHEN YOU REALIZE...)">
+                    <input type="text" id="bottomText" placeholder="BOTTOM TEXT (e.g., IT'S MONDAY)">
+                </div>
+
+                <div class="control-group">
+                    <h3>🕹️ Position Your Face</h3>
+                    <label>Scale (Make that head huge):</label>
+                    <input type="range" id="faceScale" min="0.1" max="3" step="0.1" value="0.5">
+                    
+                    <label>Left/Right (X-Axis):</label>
+                    <input type="range" id="faceX" min="0" max="1000" value="250">
+                    
+                    <label>Up/Down (Y-Axis):</label>
+                    <input type="range" id="faceY" min="0" max="1000" value="250">
+                </div>
+
+                <button id="downloadBtn" class="magic-btn">📥 Download Masterpiece</button>
+            </section>
+
+            <section class="preview">
+                <canvas id="memeCanvas"></canvas>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
